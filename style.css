@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    ---foco: #EEEEEE;
+    ---detalhes: #DC5F00;
+    ---dominante-2: #CF0A0A;
+    --dominante-1: #000000;
+}
+body{
+    background-color: var(--dominante-1);
+    color: var(---foco);
+}
+
+header{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.5625rem;
+}
+
+header input{
+    width: 15.625rem;
+    height: 1.5625rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+header button{
+    width: 6.25rem;
+    height: 1.5625rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 3.125rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    
+}
+
+.tarefa{
+    display: flex;
+    flex-direction: column;
+    background-color:var(---dominante-2);
+    font-size: 1.25rem;
+    width: 21.875rem;
+    min-height: 15.625rem;
+    height: auto;
+    margin-top: 1.25rem;
+    border-radius: 3px;
+    padding: 1.25rem 1.25rem 10px 10px;
+    gap: 1.25rem;
+}
+
+.card-tarefa{
+    display: flex;
+    gap: 3.125rem;
+    align-items: center;
+    padding-left: 5px;
+    background-color: var(---detalhes);
+    min-height: 3.125rem;
+    height: auto;
+    width: 15.625rem;
+    border-radius: 7px;
+    box-shadow: 1px 2px 2px 1px  var(--dominante-1);
+
+}
+
+.delete{
+    color: var(--dominante-1);
+    font-weight: bold;
+    
+}
+
+.delete:hover{
+    cursor: pointer;
+    font-size: 1.5625rem;
+}
+
+.card-sendo-arrastado{
+    opacity: 0.7;
+    box-shadow: 1px 2px 2px 1px  rgba(256, 256, 256, 0.5) ;
+    
+}
+
+footer{
+    text-align: center;
+    margin: 6.25rem;
+    font-size: 1.5rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(---foco);
+}
+
+a:hover{
+    text-decoration:line-through;
+    opacity: 0.8;
+}
+
+@media(max-width:810px){
+
+    main{
+        gap: 20px;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .tarefa{
+        width: 12.5rem;
+        font-size: 1rem;
+    }
+
+    .card-tarefa{
+        width: auto;
+    }
+    
+}
+@media(max-width:460px){
+
+    header{
+        font-size: 1.625rem;
+    }
+    main{
+        gap: 10px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+    .tarefa{
+        width: auto;
+        font-size: 0.7rem;
+    }
+}
+
+
