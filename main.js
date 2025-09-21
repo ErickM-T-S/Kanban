@@ -39,7 +39,7 @@ function criarTarefa(valorTarefa){
 
 
     card.addEventListener('dragstart', dragStart)
-    card.addEventListener('drag', dragging)
+
     card.addEventListener('dragend',dragend )
 
     deletar.addEventListener('click', function(){
@@ -62,22 +62,14 @@ function deletarTarefa(card,texto){
 
 function dragStart(){
     this.classList.add('card-sendo-arrastado')
-   
 }
-function dragend(){
 
+function dragend(){
     this.classList.remove('card-sendo-arrastado')
 }
-
-function dragging(){
-    console.log('arrastando')
-}
-
 
 function allowDrop(event){
     event.preventDefault()
     const cardSendoArrastado = document.querySelector('.card-sendo-arrastado')
     event.currentTarget.appendChild(cardSendoArrastado)
 }
-
-
